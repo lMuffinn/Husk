@@ -121,7 +121,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 66
+        y: 116
         width: 16
         height: 24
       alignment: 0
@@ -146,7 +146,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 82
+        y: 132
         width: 8
         height: 8
       alignment: 0
@@ -167,7 +167,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 82
+        y: 132
         width: 8
         height: 8
       alignment: 0
@@ -188,7 +188,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 56
-        y: 74
+        y: 124
         width: 16
         height: 16
       alignment: 0
@@ -209,7 +209,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 72
-        y: 74
+        y: 124
         width: 16
         height: 16
       alignment: 0
@@ -234,7 +234,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 66
+        y: 116
         width: 16
         height: 16
       alignment: 0
@@ -259,7 +259,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 66
+        y: 116
         width: 8
         height: 8
       alignment: 0
@@ -284,7 +284,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 56
-        y: 66
+        y: 116
         width: 8
         height: 8
       alignment: 0
@@ -308,8 +308,8 @@ TextureImporter:
       name: pee poster
       rect:
         serializedVersion: 2
-        x: 64
-        y: 58
+        x: 40
+        y: 100
         width: 16
         height: 16
       alignment: 0
@@ -330,7 +330,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 42
+        y: 92
         width: 16
         height: 24
       alignment: 0
@@ -355,7 +355,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 42
+        y: 92
         width: 8
         height: 24
       alignment: 0
@@ -380,7 +380,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 50
+        y: 100
         width: 16
         height: 16
       alignment: 0
@@ -401,7 +401,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 66
+        y: 116
         width: 16
         height: 24
       alignment: 0
@@ -422,7 +422,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
+        y: 52
         width: 48
         height: 40
       alignment: 0
@@ -443,7 +443,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 74
+        y: 124
         width: 8
         height: 16
       alignment: 0
@@ -455,6 +455,174 @@ TextureImporter:
       bones: []
       spriteID: 16c0ab33ff901f74397eb8cc9d7276e9
       internalID: 1573353468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kissing Hand
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cdccfb220a74140ae7e2d3dec8f48f
+      internalID: -525715798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Man with umbrella
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78d9a94719d1f94d9c83317ad60c9d7
+      internalID: 221137227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirty Sock
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4ed79bae3201746a408660e69f94f6
+      internalID: 1497618504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirty Pants
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 92
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f2786840e13ae4a8c5eb7de5bb147f
+      internalID: 1524818802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Guitar
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 92
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a69a730830c6134699f0d13c8f297b3
+      internalID: -1914054483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rug
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 92
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d690086fd8758d54fb6c9b02fa07e536
+      internalID: 51338400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desk Chair
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 68
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58003ac723ea074f811df09c8344ee3
+      internalID: 1269982311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Desk
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 52
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19ef13a913dd1a489e2652ec02fc09d
+      internalID: -223289198
       vertices: []
       indices: 
       edges: []
@@ -475,12 +643,19 @@ TextureImporter:
       toilet: -1430146080
       End table: -516977189
       Turkey poster: 461947571
-      Furniture_0: -525715798
+      Man with umbrella: 221137227
       Controller bucket: -229683901
       flowers: -959357071
       flat toilet: -187128280
+      Dirty Pants: 1524818802
+      Desk Chair: 1269982311
+      Guitar: -1914054483
+      Dirty Sock: 1497618504
+      Kissing Hand: -525715798
       Dryer: 666998184
+      Desk: -223289198
       End Table: 1573353468
+      Rug: 51338400
       Washing Machine: 728394934
       clock: 2116792565
       bean bag: -97433242
