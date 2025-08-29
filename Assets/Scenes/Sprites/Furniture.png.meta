@@ -594,7 +594,7 @@ TextureImporter:
         width: 16
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -615,7 +615,7 @@ TextureImporter:
         width: 16
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -623,6 +623,48 @@ TextureImporter:
       bones: []
       spriteID: b19ef13a913dd1a489e2652ec02fc09d
       internalID: -223289198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Bean Bag
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 116
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a520743769ca3bd46a58ba3236484d2b
+      internalID: 1187630089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big Rug
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 68
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9872e78dd68d5914caa3fde9a37151be
+      internalID: -1708830530
       vertices: []
       indices: 
       edges: []
@@ -640,6 +682,7 @@ TextureImporter:
     nameFileIdTable:
       gold glock: 293975468
       pee poster: -768435348
+      Big Rug: -1708830530
       toilet: -1430146080
       End table: -516977189
       Turkey poster: 461947571
@@ -652,6 +695,7 @@ TextureImporter:
       Guitar: -1914054483
       Dirty Sock: 1497618504
       Kissing Hand: -525715798
+      Big Bean Bag: 1187630089
       Dryer: 666998184
       Desk: -223289198
       End Table: 1573353468
