@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Task
+  - GameData
+  - Up
+  - Down
   layers:
   - Default
   - TransparentFX
@@ -40,4 +44,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Dark Shadow
+    uniqueID: 3442552981
+    locked: 0
+  - name: Light Shadow
+    uniqueID: 1864150237
     locked: 0
