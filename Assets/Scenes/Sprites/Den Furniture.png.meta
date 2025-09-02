@@ -121,7 +121,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 53
+        y: 101
         width: 40
         height: 27
       alignment: 0
@@ -142,7 +142,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 62
+        y: 110
         width: 24
         height: 18
       alignment: 0
@@ -162,12 +162,12 @@ TextureImporter:
       name: Footrest
       rect:
         serializedVersion: 2
-        x: 8
-        y: 27
+        x: 0
+        y: 75
         width: 24
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,6 +175,48 @@ TextureImporter:
       bones: []
       spriteID: 05e53955e011f794fb90b0698f9eef4e
       internalID: -1264468579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couch
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 56
+        width: 60
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93de08b7358d3044b910bf8c5c9774f
+      internalID: 743731772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lazyboy
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb931596263d4242b0d43fb5d3dc3e8
+      internalID: -910609828
       vertices: []
       indices: 
       edges: []
@@ -190,8 +232,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Lazyboy: -910609828
       TV Cabinet: 1960399843
       TV: -1106881592
+      Couch: 743731772
       Footrest: -1264468579
   spritePackingTag: 
   pSDRemoveMatte: 0
