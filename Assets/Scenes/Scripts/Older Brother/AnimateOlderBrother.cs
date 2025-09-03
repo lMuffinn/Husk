@@ -20,13 +20,13 @@ public class AnimateOlderBrother : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("Up", rb.velocity.y > 0);
-        if (rb.velocity == new Vector2(0, 0)) animator.SetBool("walking", false);
+        animator.SetBool("Up", rb.linearVelocity.y > 0);
+        if (rb.linearVelocity == new Vector2(0, 0)) animator.SetBool("walking", false);
         else
         {
             animator.SetBool("walking", true);
-            if (rb.velocity.x > 0) spriteRenderer.flipX = true;
-            else if (rb.velocity.x < 0) spriteRenderer.flipX = false;
+            if (rb.linearVelocity.x > 0) spriteRenderer.flipX = true;
+            else if (rb.linearVelocity.x < 0) spriteRenderer.flipX = false;
         }
     }
 }

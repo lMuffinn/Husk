@@ -46,7 +46,7 @@ public class Movement : MonoBehaviour
         else if (right) stairsBonus = horizontal;
         else stairsBonus = 0;
         //controls movement + whatever direction the stairs are in
-        rb.velocity = new Vector2(horizontal * speed, vertical * speed + speed * stairsBonus);
+        rb.linearVelocity = new Vector2(horizontal * speed, vertical * speed + speed * stairsBonus);
     }
     void Update()
     {
