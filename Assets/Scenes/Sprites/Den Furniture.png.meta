@@ -241,7 +241,7 @@ TextureImporter:
         width: 38
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -250,6 +250,72 @@ TextureImporter:
       bones: []
       spriteID: e4ceed5ceda0854469c8842c49c9e673
       internalID: -1977130606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pool queues
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 72
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb3dc1ee41ac324c9e6e9717d697bf5
+      internalID: -24821456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: side table
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f143a4d308f61143b35e4e9f431c81c
+      internalID: 143046273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: game cabinet
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 24
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6d908ac77fab0499cffd1cef3a670b
+      internalID: 952246224
       vertices: []
       indices: 
       edges: []
@@ -274,6 +340,9 @@ TextureImporter:
       Small Lazyboy: -1977130606
       TV: -1106881592
       TV Cabinet: 1960399843
+      game cabinet: 952246224
+      pool queues: -24821456
+      side table: 143046273
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
