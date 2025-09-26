@@ -42,14 +42,20 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Not Supposed To Be Seen
+    uniqueID: 523538469
+    locked: 0
+  - name: Ground
+    uniqueID: 2959104687
+    locked: 0
+  - name: Walls
+    uniqueID: 3501490753
+    locked: 0
+  - name: Objects
+    uniqueID: 2465715625
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Dark Shadow
-    uniqueID: 3442552981
-    locked: 0
-  - name: Light Shadow
-    uniqueID: 1864150237
     locked: 0
   m_RenderingLayers:
   - Default
