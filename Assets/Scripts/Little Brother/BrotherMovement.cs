@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //using Pathfinding;
-using Cinemachine;
+//using Cinemachine;
 
 public class BrotherMovement : MonoBehaviour
 {
@@ -40,8 +40,8 @@ public class BrotherMovement : MonoBehaviour
         {
             Debug.Log(target.gameObject.GetComponent<Floor>().floor);
             //AID.target = FindTarget(target.gameObject.GetComponent<Floor>().floor, target.gameObject);
-            cinemachine.GetComponent<CinemachineConfiner2D>().m_BoundingShape2D = boundary[GetComponent<Floor>().floor];
-            cinemachine.GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = lenseSize;
+            //cinemachine.GetComponent<CinemachineConfiner2D>().m_BoundingShape2D = boundary[GetComponent<Floor>().floor];
+            //cinemachine.GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = lenseSize;
         }
         else
         {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Cinemachine;
+//using Cinemachine;
 
 public class Items : MonoBehaviour
 {
@@ -51,7 +51,7 @@ public class Items : MonoBehaviour
                 littleBrother.GetComponent<LoneSection>().enabled = true;
                 littleBrother.GetComponent<LoneSection>().target = littleBrother.GetComponent<Transform>();
                 littleBrotherSection = true;
-                Camera.GetComponent<CinemachineVirtualCamera>().Follow = littleBrother.GetComponent<Transform>();
+                //Camera.GetComponent<CinemachineVirtualCamera>().Follow = littleBrother.GetComponent<Transform>();
             }
             else
             {
