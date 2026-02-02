@@ -1,11 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using Cinemachine;
+using UnityEngine.InputSystem;
+// using Cinemachine;
 
 public class Movement : MonoBehaviour
 {
 
+    public float moveSpeed = 10f;
+    bool sprinting = false;
+    Vector2 moveInput;
+    
     float speed = 10;
     GameObject GameData;
     public LayerMask up;
@@ -46,11 +52,36 @@ public class Movement : MonoBehaviour
         else if (right) stairsBonus = horizontal;
         else stairsBonus = 0;
         //controls movement + whatever direction the stairs are in
-        rb.linearVelocity = new Vector2(horizontal * speed, vertical * speed + speed * stairsBonus);
+        // rb.linearVelocity = new Vector2(horizontal * speed, vertical * speed + speed * stairsBonus);
+        if (sprinting)
+        {
+            rb.linearVelocity = moveSpeed * 2f * moveInput;
+        }
+        else
+        {
+            rb.linearVelocity = moveSpeed * moveInput;
+        }
     }
     void Update()
     {
        // cinemachine.GetComponent<CinemachineConfiner2D>().m_BoundingShape2D = boundary[GetComponent<Floor>().floor];
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+    }
+
+    public void Sprint(InputAction.CallbackContext context)
+    {
+        if (!context.canceled)
+        {
+            sprinting = true;
+        }
+        else
+        {
+            sprinting = false;
+        }
     }
 
     Transform GetClosestInteractable(List<Transform> interactableObjects, Transform fromThis)
