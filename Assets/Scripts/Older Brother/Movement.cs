@@ -1,3 +1,9 @@
+/*
+ * Movement.cs
+ * Authors: Matthew Eagleman, Trevor Eagleman
+ * Date Created: like, sometime in fall 2022
+ * Purpose: Control the movement of the older brother
+ */
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -43,6 +49,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        /* The following code is old and bad. It made it so when the player goes onto the stairs they automatically start moving 
+         * diagonally as to look like they are actaully going up/down the stairs.
         //is the player on stairs
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -52,7 +60,9 @@ public class Movement : MonoBehaviour
         else if (right) stairsBonus = horizontal;
         else stairsBonus = 0;
         //controls movement + whatever direction the stairs are in
-        // rb.linearVelocity = new Vector2(horizontal * speed, vertical * speed + speed * stairsBonus);
+        rb.linearVelocity = new Vector2(horizontal * speed, vertical * speed + speed * stairsBonus);
+        This can be removed when better code is added*/
+
         if (sprinting)
         {
             rb.linearVelocity = moveSpeed * 2f * moveInput;
@@ -84,8 +94,12 @@ public class Movement : MonoBehaviour
         }
     }
 
+
     Transform GetClosestInteractable(List<Transform> interactableObjects, Transform fromThis)
     {
+        //This is old lame muffin coding lol. I got this off the internet so its not even mine
+        //All it does is get the position of the nearest object? Its so simple its kinda funny i had to look it up.
+        //This was being used in my implementation of interactable objects
         Transform bestTarget = null;
         float closestDistanceSqr = Mathf.Infinity;
         Vector3 currentPosition = fromThis.position;

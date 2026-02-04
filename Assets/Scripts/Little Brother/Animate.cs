@@ -1,16 +1,24 @@
+/*
+ * Animate.cs
+ * Authors: Matthew Eagleman
+ * Date Created: like, sometime in fall 2022
+ * Purpose: Control character animations
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Animate : MonoBehaviour
 {
-    Animator animator;
+    //Global Variable Declarations
+    Animator animator; 
     Vector3 old;
     Vector3 recent;
     Transform tTransform;
     // Start is called before the first frame update
     void Start()
     {
+        //Assigns variables to the actual components on the gameobjects.
         animator = GetComponent<Animator>();
         tTransform = GetComponent<Transform>();
         old = tTransform.position;
