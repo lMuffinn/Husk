@@ -1,32 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class AnimateOlderBrother : MonoBehaviour
 {
-
-    Rigidbody2D rb;
     Animator animator;
     SpriteRenderer spriteRenderer;
+    InputAction moveAction;
+    Vector2 moveInput;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponentInParent<Rigidbody2D>();
         spriteRenderer = GetComponentInParent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        moveAction = GetComponentInParent<PlayerInput>().actions.FindAction("Move");
+        animator = GetComponent<Animator>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("Up", rb.linearVelocity.y > 0);
-        if (rb.linearVelocity == new Vector2(0, 0)) animator.SetBool("walking", false);
+        moveInput = moveAction.ReadValue<Vector2>();
+        Debug.Log(animator);
+        if (moveInput.magnitude == 0)
+            animator.SetBool("Walking", false);
         else
         {
-            animator.SetBool("walking", true);
-            if (rb.linearVelocity.x > 0) spriteRenderer.flipX = true;
-            else if (rb.linearVelocity.x < 0) spriteRenderer.flipX = false;
+            Debug.Log("Walking");
+            animator.SetBool("Walking", true);
+            if (moveInput.x > 0) spriteRenderer.flipX = true;
+            else if (moveInput.x < 0) spriteRenderer.flipX = false;
         }
+        animator.SetFloat("VelocityY", moveInput.y);
     }
 }
