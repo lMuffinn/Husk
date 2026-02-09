@@ -14,30 +14,30 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
 
-    public float moveSpeed = 10f;
+    [SerializeField] float moveSpeed = 10f;
     bool sprinting = false;
     Vector2 moveInput;
-    
-    float speed = 10;
     GameObject GameData;
-    public LayerMask up;
-    public LayerMask down;
-    public bool isTouchingStairs = false;
-    Vector3 pos;
     Rigidbody2D rb;
+    
+    // float speed = 10;
+    // public LayerMask up;
+    // public LayerMask down;
+    // public bool isTouchingStairs = false;
+    // Vector3 pos;
     //interaction--------------
-    public float interactionRadius;
-    public LayerMask Interactable;
-    //stairs-------------------
-    public float stairsRadius = .2f;
-    public LayerMask stairsRight;
-    public LayerMask stairsLeft;
-    float stairsBonus;
-    public Transform feet;
-    public int floor;
+    // public float interactionRadius;
+    // public LayerMask Interactable;
+    // //stairs-------------------
+    // public float stairsRadius = .2f;
+    // public LayerMask stairsRight;
+    // public LayerMask stairsLeft;
+    // float stairsBonus;
+    // public Transform feet;
+    // public int floor;
     //camera--------------------
-    public Collider2D[] boundary;
-    public GameObject cinemachine;
+    // public Collider2D[] boundary;
+    // public GameObject cinemachine;
 
     // Start is called before the first frame update
     void Start()
@@ -84,36 +84,29 @@ public class Movement : MonoBehaviour
 
     public void Sprint(InputAction.CallbackContext context)
     {
-        if (!context.canceled)
-        {
-            sprinting = true;
-        }
-        else
-        {
-            sprinting = false;
-        }
+        sprinting = (!context.canceled) ? true : false;
     }
 
 
-    Transform GetClosestInteractable(List<Transform> interactableObjects, Transform fromThis)
-    {
-        //This is old lame muffin coding lol. I got this off the internet so its not even mine
-        //All it does is get the position of the nearest object? Its so simple its kinda funny i had to look it up.
-        //This was being used in my implementation of interactable objects
-        Transform bestTarget = null;
-        float closestDistanceSqr = Mathf.Infinity;
-        Vector3 currentPosition = fromThis.position;
-        foreach (Transform potentialTarget in interactableObjects)
-        {
-            Vector3 directionToTarget = potentialTarget.position - currentPosition;
-            float dSqrToTarget = directionToTarget.sqrMagnitude;
-            if (dSqrToTarget < closestDistanceSqr)
-            {
-                closestDistanceSqr = dSqrToTarget;
-                bestTarget = potentialTarget;
-            }
-        }
-        return bestTarget;
-    }
+    // Transform GetClosestInteractable(List<Transform> interactableObjects, Transform fromThis)
+    // {
+    //     //This is old lame muffin coding lol. I got this off the internet so its not even mine
+    //     //All it does is get the position of the nearest object? Its so simple its kinda funny i had to look it up.
+    //     //This was being used in my implementation of interactable objects
+    //     Transform bestTarget = null;
+    //     float closestDistanceSqr = Mathf.Infinity;
+    //     Vector3 currentPosition = fromThis.position;
+    //     foreach (Transform potentialTarget in interactableObjects)
+    //     {
+    //         Vector3 directionToTarget = potentialTarget.position - currentPosition;
+    //         float dSqrToTarget = directionToTarget.sqrMagnitude;
+    //         if (dSqrToTarget < closestDistanceSqr)
+    //         {
+    //             closestDistanceSqr = dSqrToTarget;
+    //             bestTarget = potentialTarget;
+    //         }
+    //     }
+    //     return bestTarget;
+    // }
 
 }

@@ -30,63 +30,67 @@ public class Items : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Physics2D.OverlapCircle(littleBrother.GetComponent<Transform>().position, itemRadius, itemLayer) && littleBrotherSection)
-        {
-            Collider2D col = Physics2D.OverlapCircle(littleBrother.GetComponent<Transform>().position, itemRadius, itemLayer);
-            InteractableObject interactable = col.GetComponent<InteractableObject>();
-            Debug.Log(interactable.gameObject.name);
-            items[itemsCurrent] = interactable.gameObject;
-            interactable.gameObject.GetComponent<Transform>().position = inventoryPos.position;
-            itemsCurrent++;
-        }
-        else if (Physics2D.OverlapCircle(tr.position, itemRadius, itemLayer) && Input.GetKeyDown(KeyCode.E))
-        {
-            Collider2D col = Physics2D.OverlapCircle(tr.position, itemRadius, itemLayer);
-            InteractableObject interactable = col.GetComponent<InteractableObject>();
-            Debug.Log(interactable.gameObject.name);
-            if(interactable.gameObject.name == "Attic key")
-            {
-                GetComponent<Movement>().enabled = false;
-                moniter.SetActive(true);
-                littleBrother.GetComponent<LoneSection>().enabled = true;
-                littleBrother.GetComponent<LoneSection>().target = littleBrother.GetComponent<Transform>();
-                littleBrotherSection = true;
-                //Camera.GetComponent<CinemachineVirtualCamera>().Follow = littleBrother.GetComponent<Transform>();
-            }
-            else
-            {
-                items[itemsCurrent] = interactable.gameObject;
-                interactable.gameObject.GetComponent<Transform>().position = inventoryPos.position;
-                itemsCurrent++;
-            }
-            if (!inventoryOn)
-            {
-                invCanvas.GetComponent<Canvas>().enabled = false;
-                inventory.SetActive(true);
-                inventory.GetComponent<Children>().itemName = interactable.gameObject.name;
-                inventory.GetComponent<Children>().AddItem();
-                inventory.SetActive(false);
-                invCanvas.GetComponent<Canvas>().enabled = true;
-            }
-            if (inventoryOn)
-            {
-                inventory.GetComponent<Children>().itemName = interactable.gameObject.name;
-                inventory.GetComponent<Children>().AddItem();
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (!inventoryOn)
-            {
-                inventory.SetActive(true);
-                inventoryOn = true;
-            }
-            else if (inventoryOn)
-            {
-                inventory.SetActive(false);
-                inventoryOn = false;
-            }
-        }
+        /***
+        * Commenting out this whole section for now because it's throwing errors. 
+        * All references to the old input system,e.g. `Input.GetKeyDown` need to be updated to the new input system.
+        */
+        // if (Physics2D.OverlapCircle(littleBrother.GetComponent<Transform>().position, itemRadius, itemLayer) && littleBrotherSection)
+        // {
+        //     Collider2D col = Physics2D.OverlapCircle(littleBrother.GetComponent<Transform>().position, itemRadius, itemLayer);
+        //     InteractableObject interactable = col.GetComponent<InteractableObject>();
+        //     Debug.Log(interactable.gameObject.name);
+        //     items[itemsCurrent] = interactable.gameObject;
+        //     interactable.gameObject.GetComponent<Transform>().position = inventoryPos.position;
+        //     itemsCurrent++;
+        // }
+        // else if (Physics2D.OverlapCircle(tr.position, itemRadius, itemLayer) && Input.GetKeyDown(KeyCode.E))
+        // {
+        //     Collider2D col = Physics2D.OverlapCircle(tr.position, itemRadius, itemLayer);
+        //     InteractableObject interactable = col.GetComponent<InteractableObject>();
+        //     Debug.Log(interactable.gameObject.name);
+        //     if(interactable.gameObject.name == "Attic key")
+        //     {
+        //         GetComponent<Movement>().enabled = false;
+        //         moniter.SetActive(true);
+        //         littleBrother.GetComponent<LoneSection>().enabled = true;
+        //         littleBrother.GetComponent<LoneSection>().target = littleBrother.GetComponent<Transform>();
+        //         littleBrotherSection = true;
+        //         //Camera.GetComponent<CinemachineVirtualCamera>().Follow = littleBrother.GetComponent<Transform>();
+        //     }
+        //     else
+        //     {
+        //         items[itemsCurrent] = interactable.gameObject;
+        //         interactable.gameObject.GetComponent<Transform>().position = inventoryPos.position;
+        //         itemsCurrent++;
+        //     }
+        //     if (!inventoryOn)
+        //     {
+        //         invCanvas.GetComponent<Canvas>().enabled = false;
+        //         inventory.SetActive(true);
+        //         inventory.GetComponent<Children>().itemName = interactable.gameObject.name;
+        //         inventory.GetComponent<Children>().AddItem();
+        //         inventory.SetActive(false);
+        //         invCanvas.GetComponent<Canvas>().enabled = true;
+        //     }
+        //     if (inventoryOn)
+        //     {
+        //         inventory.GetComponent<Children>().itemName = interactable.gameObject.name;
+        //         inventory.GetComponent<Children>().AddItem();
+        //     }
+        // }
+        // if (Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     if (!inventoryOn)
+        //     {
+        //         inventory.SetActive(true);
+        //         inventoryOn = true;
+        //     }
+        //     else if (inventoryOn)
+        //     {
+        //         inventory.SetActive(false);
+        //         inventoryOn = false;
+        //     }
+        // }
     }
 
     private void OnDrawGizmosSelected ()
