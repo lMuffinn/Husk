@@ -18,11 +18,16 @@ public class Movement : MonoBehaviour
 
     Vector2 moveInput;
     float _speed;
+    float _velocityX;
+    float _velocityY;
+    float _acceleration = 5f;
     bool _sprinting = false;
 
     [SerializeField] float _maxSpeed = 10f;
     [SerializeField] float _maxSprintSpeed = 20f;
-    
+    [SerializeField] float _accelerate = 5f;
+    [SerializeField] float _decelerate = 7f;
+
     // float speed = 10;
     // public LayerMask up;
     // public LayerMask down;
@@ -66,9 +71,18 @@ public class Movement : MonoBehaviour
         rb.linearVelocity = new Vector2(horizontal * speed, vertical * speed + speed * stairsBonus);
         This can be removed when better code is added*/
 
-        _speed = _sprinting ? _maxSprintSpeed : _maxSpeed;
+        // Simple movement
+        // _speed = _sprinting ? _maxSprintSpeed : _maxSpeed;
+        // rb.linearVelocity = new Vector2(moveInput.x * _speed, moveInput.y * _speed);
+        // Movement with acceleration
 
-        rb.linearVelocity = new Vector2(moveInput.x * _speed, moveInput.y * _speed);
+        _speed = _sprinting ? _maxSprintSpeed : _maxSpeed;
+        _acceleration = moveInput.magnitude == 0 ? _decelerate : _accelerate;
+        
+        _velocityX += (moveInput.x * _speed - _velocityX) * _acceleration * Time.fixedDeltaTime;
+        _velocityY += (moveInput.y * _speed - _velocityY) * _acceleration * Time.fixedDeltaTime;
+
+        rb.linearVelocity = new Vector2(_velocityX, _velocityY);
     }
     void Update()
     {
