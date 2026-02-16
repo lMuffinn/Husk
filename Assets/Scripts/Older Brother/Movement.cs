@@ -13,12 +13,15 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-
-    [SerializeField] float moveSpeed = 10f;
-    bool sprinting = false;
-    Vector2 moveInput;
     GameObject GameData;
     Rigidbody2D rb;
+
+    Vector2 moveInput;
+    float _speed;
+    bool _sprinting = false;
+
+    [SerializeField] float _maxSpeed = 10f;
+    [SerializeField] float _maxSprintSpeed = 20f;
     
     // float speed = 10;
     // public LayerMask up;
@@ -63,14 +66,9 @@ public class Movement : MonoBehaviour
         rb.linearVelocity = new Vector2(horizontal * speed, vertical * speed + speed * stairsBonus);
         This can be removed when better code is added*/
 
-        if (sprinting)
-        {
-            rb.linearVelocity = moveSpeed * 2f * moveInput;
-        }
-        else
-        {
-            rb.linearVelocity = moveSpeed * moveInput;
-        }
+        _speed = _sprinting ? _maxSprintSpeed : _maxSpeed;
+
+        rb.linearVelocity = new Vector2(moveInput.x * _speed, moveInput.y * _speed);
     }
     void Update()
     {
@@ -84,7 +82,7 @@ public class Movement : MonoBehaviour
 
     public void Sprint(InputAction.CallbackContext context)
     {
-        sprinting = (!context.canceled) ? true : false;
+        _sprinting = (!context.canceled) ? true : false;
     }
 
 

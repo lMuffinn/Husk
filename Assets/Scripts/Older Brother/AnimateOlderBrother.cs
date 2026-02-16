@@ -22,12 +22,10 @@ public class AnimateOlderBrother : MonoBehaviour
     void Update()
     {
         moveInput = moveAction.ReadValue<Vector2>();
-        Debug.Log(animator);
         if (moveInput.magnitude == 0)
             animator.SetBool("Walking", false);
         else
         {
-            Debug.Log("Walking");
             animator.SetBool("Walking", true);
             if (moveInput.x > 0) spriteRenderer.flipX = true;
             else if (moveInput.x < 0) spriteRenderer.flipX = false;
