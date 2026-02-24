@@ -42,7 +42,7 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Not Supposed To Be Seen
+  - name: Hidden
     uniqueID: 523538469
     locked: 0
   - name: Ground
