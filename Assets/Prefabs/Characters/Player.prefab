@@ -487,11 +487,11 @@ Transform:
   m_GameObject: {fileID: 1623023309500095020}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.8199997, z: 1.00014}
+  m_LocalPosition: {x: 0, y: 2.8199997, z: -0.60072}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4744611688774812606}
+  - {fileID: 7879639068861589220}
   m_Father: {fileID: 1623023309082563951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1623023309500095016
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LayerController
   yMax: 100
   yMin: -150
-  yIndicator: {fileID: 4744611688774812606}
+  yIndicator: {fileID: 7879639068861589220}
   dynamic: 1
 --- !u!1 &2405464323511973096
 GameObject:
@@ -1605,7 +1605,7 @@ PolygonCollider2D:
       - {x: -28, y: -20}
       - {x: 44, y: -20}
   m_UseDelaunayMesh: 0
---- !u!1 &8793056671032127843
+--- !u!1 &8537166667967804009
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1613,7 +1613,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4744611688774812606}
+  - component: {fileID: 7879639068861589220}
   m_Layer: 0
   m_Name: New Game Object
   m_TagString: Untagged
@@ -1621,16 +1621,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4744611688774812606
+--- !u!4 &7879639068861589220
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8793056671032127843}
+  m_GameObject: {fileID: 8537166667967804009}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 1.0318757}
+  m_LocalPosition: {x: 0, y: -3, z: 0.605095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
