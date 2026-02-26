@@ -9,13 +9,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 // using Cinemachine;
 
 public class Movement : MonoBehaviour
 {
     GameObject GameData;
     Rigidbody2D rb;
-
+    SortingGroup _sortingGroup;
     Vector2 moveInput;
     float _speed;
     float _velocityX;
@@ -52,6 +53,7 @@ public class Movement : MonoBehaviour
     {
         GameData = GameObject.FindGameObjectWithTag("GameData");
         rb = GetComponent<Rigidbody2D>();
+        _sortingGroup = GetComponent<SortingGroup>();
     }
 
     // Update is called once per frame
@@ -97,6 +99,11 @@ public class Movement : MonoBehaviour
     public void Sprint(InputAction.CallbackContext context)
     {
         _sprinting = (!context.canceled) ? true : false;
+    }
+
+    public void ChangeFloor(int floor)
+    {
+        _sortingGroup.sortingOrder = floor;
     }
 
 
