@@ -95,14 +95,12 @@ public class Movement : MonoBehaviour
         _velocityY += (_moveInput.y * _speed - _velocityY) * _acceleration * Time.fixedDeltaTime;
 
         // Add Stair velocity separately so it isn't incorporated into the movement easing
-        Vector2 stairVelocity = new Vector2(0f,0f);
+        float stairVelocityY = 0f;
         if (_isOnStairs)
         {
-            stairVelocity.y = _stairsFaceRight ? _moveInput.x : -_moveInput.x;
-            // multiply by speed and adjust for diagonal motion (sine of 45deg)
-            stairVelocity.y *= _speed * 0.7071f; 
+            stairVelocityY = _stairsFaceRight ? _velocityX : -_velocityX;
         }
-        rb.linearVelocity = new Vector2(_velocityX, _velocityY) + stairVelocity;
+        rb.linearVelocity = new Vector2(_velocityX, _velocityY + stairVelocityY);
     }
     void Update()
     {
