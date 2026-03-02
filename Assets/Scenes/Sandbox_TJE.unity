@@ -34923,12 +34923,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1883874349}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 965616b20262d48bda3cbfe56d94bed8, type: 3}
+  m_Script: {fileID: 11500000, guid: 87f88781f86724b639c4b0f5899a0fb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
   _floor: 20
-  _incline: 0
-  _stairsFaceRight: 1
 --- !u!1 &1921515603
 GameObject:
   m_ObjectHideFlags: 0
@@ -35111,12 +35109,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967677481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 965616b20262d48bda3cbfe56d94bed8, type: 3}
+  m_Script: {fileID: 11500000, guid: 87f88781f86724b639c4b0f5899a0fb1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Stairs_dev_tje
+  m_EditorClassIdentifier: Assembly-CSharp::FloorLevel_dev_tje
   _floor: 10
-  _incline: 0
-  _stairsFaceRight: 1
 --- !u!1 &1976063860
 GameObject:
   m_ObjectHideFlags: 0

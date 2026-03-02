@@ -13,7 +13,7 @@ public class Stairs_dev_tje : MonoBehaviour
         var player = collision.GetComponent<Movement>();
         if (player)
         {
-            collision.GetComponent<Movement>().ChangeFloor(_floor);
+            player.ChangeFloor(_floor);
             if (_incline) 
                 player.IsOnStairs(true, _stairsFaceRight);
         }
