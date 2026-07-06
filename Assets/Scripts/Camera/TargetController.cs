@@ -1,3 +1,9 @@
+/*
+ * FatherMovement.cs
+ * Authors: Matthew Eagleman
+ * Date Created: Fall 2025
+ * Purpose: Control the movement of the Father
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
