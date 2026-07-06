@@ -9,24 +9,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 // using Cinemachine;
 
 public class Movement : MonoBehaviour
 {
     GameObject GameData;
     Rigidbody2D rb;
+    SortingGroup _sortingGroup;
+    
+    PlayerInput _playerInput;
 
-    Vector2 moveInput;
+    [SerializeField] float _maxSpeed = 10f;
+    [SerializeField] float _maxSprintSpeed = 20f;
+    [SerializeField] float _accelerate = 5f;
+    [SerializeField] float _decelerate = 7f;
+
+    Vector2 _moveInput;
     float _speed;
     float _velocityX;
     float _velocityY;
     float _acceleration = 5f;
     bool _sprinting = false;
 
-    [SerializeField] float _maxSpeed = 10f;
-    [SerializeField] float _maxSprintSpeed = 20f;
-    [SerializeField] float _accelerate = 5f;
-    [SerializeField] float _decelerate = 7f;
+
+
+    bool _isOnStairs = false;
+    bool _stairsFaceRight;
 
     // float speed = 10;
     // public LayerMask up;
@@ -47,11 +56,12 @@ public class Movement : MonoBehaviour
     // public Collider2D[] boundary;
     // public GameObject cinemachine;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         GameData = GameObject.FindGameObjectWithTag("GameData");
         rb = GetComponent<Rigidbody2D>();
+        _sortingGroup = GetComponent<SortingGroup>();
+        _playerInput = GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
@@ -71,32 +81,46 @@ public class Movement : MonoBehaviour
         rb.linearVelocity = new Vector2(horizontal * speed, vertical * speed + speed * stairsBonus);
         This can be removed when better code is added*/
 
+        _moveInput = _playerInput.actions["Move"].ReadValue<Vector2>();
+
         // Simple movement
         // _speed = _sprinting ? _maxSprintSpeed : _maxSpeed;
-        // rb.linearVelocity = new Vector2(moveInput.x * _speed, moveInput.y * _speed);
+        // rb.linearVelocity = new Vector2(_moveInput.x * _speed, _moveInput.y * _speed);
+
         // Movement with acceleration
-
         _speed = _sprinting ? _maxSprintSpeed : _maxSpeed;
-        _acceleration = moveInput.magnitude == 0 ? _decelerate : _accelerate;
+        _acceleration = _moveInput.magnitude == 0 ? _decelerate : _accelerate;
         
-        _velocityX += (moveInput.x * _speed - _velocityX) * _acceleration * Time.fixedDeltaTime;
-        _velocityY += (moveInput.y * _speed - _velocityY) * _acceleration * Time.fixedDeltaTime;
+        _velocityX += (_moveInput.x * _speed - _velocityX) * _acceleration * Time.fixedDeltaTime;
+        _velocityY += (_moveInput.y * _speed - _velocityY) * _acceleration * Time.fixedDeltaTime;
 
-        rb.linearVelocity = new Vector2(_velocityX, _velocityY);
+        // Add Stair velocity separately so it isn't incorporated into the movement easing
+        float stairVelocityY = 0f;
+        if (_isOnStairs)
+        {
+            stairVelocityY = _stairsFaceRight ? _velocityX : -_velocityX;
+        }
+        rb.linearVelocity = new Vector2(_velocityX, _velocityY + stairVelocityY);
     }
     void Update()
     {
        // cinemachine.GetComponent<CinemachineConfiner2D>().m_BoundingShape2D = boundary[GetComponent<Floor>().floor];
     }
 
-    public void Move(InputAction.CallbackContext context)
-    {
-        moveInput = context.ReadValue<Vector2>();
-    }
-
     public void Sprint(InputAction.CallbackContext context)
     {
         _sprinting = (!context.canceled) ? true : false;
+    }
+
+    public void ChangeFloor(int floor)
+    {
+        _sortingGroup.sortingOrder = floor;
+    }
+
+    public void IsOnStairs(bool state, bool isRight)
+    {
+        _isOnStairs = state;
+        _stairsFaceRight = isRight;
     }
 
 
