@@ -1,8 +1,8 @@
 /*
  * Movement.cs
- * Authors: Matthew Eagleman, Trevor Eagleman
- * Date Created: like, sometime in fall 2022
  * Purpose: Control the movement of the older brother
+ * Date Created: like, sometime in fall 2022
+ * Authors: Matthew Eagleman, Trevor Eagleman
  */
 using System;
 using System.Collections;

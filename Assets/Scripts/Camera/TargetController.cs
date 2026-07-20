@@ -1,5 +1,5 @@
 /*
- * FatherMovement.cs
+ * TargetController.cs
  * Authors: Matthew Eagleman
  * Date Created: Fall 2025
  * Purpose: Control the movement of the Father
@@ -8,6 +8,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //using Pathfinding;
+
+// TO DO:
+// - put find stairs into a library, as well as a distance function
 
 public class TargetController : MonoBehaviour
 {
@@ -102,6 +105,7 @@ public class TargetController : MonoBehaviour
     }
     Transform GetClosestStairs(List<Transform> stairs, Transform fromThis)
     {
+        //yet another thing thats been defined multiple times, we'll
         Transform bestTarget = null;
         float closestDistanceSqr = Mathf.Infinity;
         Vector3 currentPosition = fromThis.position;

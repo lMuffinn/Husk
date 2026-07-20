@@ -2,7 +2,7 @@
  * CameraController.cs
  * Authors: Matthew Eagleman
  * Date Created: spring 2023ish? maybe?
- * Purpose: Control the movement of the older brother
+ * Purpose: Controls camera movement
  */
 using System.Collections;
 using System.Collections.Generic;
